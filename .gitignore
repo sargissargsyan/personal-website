@@ -1,0 +1,9 @@
+# Not part of the live site
+_backup-before-redesign/
+_unused/
+.claude/
+*.zip
+.DS_Store
+
+# Stray archive copy without a .zip extension
+ziU0T35q

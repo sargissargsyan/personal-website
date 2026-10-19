@@ -1,0 +1,15 @@
+# Security headers for Netlify / Cloudflare Pages (static hosting).
+# These make the site read-only and hard to abuse. Adjust per host as needed.
+/*
+  Content-Security-Policy: default-src 'self'; img-src 'self' data:; script-src 'self'; style-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'; object-src 'none'; upgrade-insecure-requests
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  Cross-Origin-Opener-Policy: same-origin
+  X-XSS-Protection: 0
+
+# Long-cache immutable static assets
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
